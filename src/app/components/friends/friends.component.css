@@ -1,0 +1,49 @@
+.friends-card{
+  width:21%;
+  float:left;
+  margin:5px 5px 5px 5px;
+  height:40px;
+}  
+  .header-image {
+    background-size: cover;
+  }
+
+  .remove-button{
+    float:right;
+    margin-top:-60px;
+  }
+
+  @media only screen and (max-width:1500px){
+    .friends-card{
+      width:29%;
+      float:left;
+      margin:5px 5px 5px 5px;
+      height:40px;
+    }  
+    .remove-button{
+      float:right;
+      margin-right:35px !important;
+    }
+  }
+
+  @media only screen and (max-width:900){
+    .friends-card{
+      width:45%;
+      float:left;
+      margin:5px 5px 5px 5px;
+      height:40px;
+    }
+  }
+
+  @media only screen and (max-width:500px){
+    .friends-card{
+      width:100%;
+      float:left;
+      margin:5px 5px 5px 5px;
+      height:40px;
+    }  
+    .remove-button{
+      float:right;
+      margin-right:35px !important;
+    }
+  }

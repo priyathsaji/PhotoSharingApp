@@ -1,0 +1,10 @@
+.display-image{
+    width:60%;
+    float:left;
+    border-radius: 50%;
+}
+.display-name{
+    float:left;
+    width:100%;
+    font-size: 10px !important;
+}

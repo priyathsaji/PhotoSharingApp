@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Hi {{data.ownerName}}</h1>
+<div mat-dialog-content>
+    <p>Select the file to upload</p>
+        <input type="file" (change)="startUpload($event.target.files)">
+        <br>
+        <br>
+        <img *ngIf="isUploaded()" [src]='data.postDownloadUrl' class="upload-image">
+        <br>
+        <br>
+        <mat-form-field>
+            <textarea matInput placeholder="Description" matTextareaAutosize matAutoSizeMinRows='2' matAutosizeMaxRows='6' [(ngModel)] ="data.postDescription"></textarea>
+        </mat-form-field>
+        <br>
+        <p>Select Visibility</p>
+        <mat-radio-group [(ngModel)]="data.postVisibility">
+                <mat-radio-button matTooltip="Only to You and Your Friends" value="private">Private</mat-radio-button>
+                <mat-radio-button matTooltip="to everybody" value="public">Public</mat-radio-button>
+        </mat-radio-group>
+
+</div>
+<div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]='data'>Upload</button>     
+</div>

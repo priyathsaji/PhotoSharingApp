@@ -1,0 +1,95 @@
+{{signUpPassword}}
+    <mat-card class = "login-card">
+        
+        <mat-grid-list cols="1" rowHeight="62px"> 
+        <mat-grid-tile [rowspan]="2"> 
+        <div>   
+            <h2 style="text-align: center">FYnsta</h2>
+            <p style="text-align:center">Sign in to to see the photos posted by your friends</p>
+        </div>
+    </mat-grid-tile>
+        <mat-grid-tile *ngIf="signUp">
+            <mat-form-field class="full-width">
+                <input matInput type="input" placeholder="Name">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile *ngIf="signUp">
+                <mat-form-field class="full-width">
+                        <input matInput [(ngModel)]="signUpPassword" placeholder="Password" type="password" [formControl]="passwordFormControl"
+                        [errorStateMatcher]="matcher">
+                <mat-error  matTooltip="Password must contain at least one letter, at least one number, and be longer than six charaters"  *ngIf="passwordFormControl.hasError('pattern') && !passwordFormControl.hasError('required')">
+                  Please enter a valid Password
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                   Password is <strong>required</strong>
+                </mat-error>
+                </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile *ngIf="signUp">
+                <mat-form-field class="full-width">
+                        <input matInput [(ngModel)]="signUpPassword2" placeholder="Confirm Password" type="password" [formControl]="passwordFormControl2"
+                        [errorStateMatcher]="matcher">
+              <mat-error matTooltip="Password must contain at least one letter, at least one number, and be longer than six charaters" *ngIf="passwordFormControl2.hasError('pattern') && !passwordFormControl2.hasError('required')">
+                  Please enter a valid Password
+             </mat-error>
+             <mat-error *ngIf="passwordFormControl2.hasError('required')">
+                   Password is <strong>required</strong>
+              </mat-error>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile *ngIf="signUp">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Email" [formControl]="emailFormControl">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                                Please enter a valid email address
+                          </mat-error>
+                          <mat-error *ngIf="emailFormControl.hasError('required')">
+                                Email is <strong>required</strong>
+                          </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+            <mat-grid-tile *ngIf="!signUp" [rowspan]="1" >
+        <mat-form-field class="full-width" >
+            <input matInput placeholder="Email" [formControl]="emailFormControl" 
+                     [errorStateMatcher]="matcher">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        </mat-grid-tile>
+        <mat-grid-tile *ngIf="!signUp" [rowspan]="1">
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Password" type="password" [formControl]="passwordFormControl"
+                       [errorStateMatcher]="matcher">
+             <mat-error   matTooltip="Password must contain at least one letter, at least one number, and be longer than six charaters" *ngIf="passwordFormControl.hasError('pattern') && !passwordFormControl.hasError('required')">
+                 Please enter a valid Password
+            </mat-error>
+            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                  Password is <strong>required</strong>
+             </mat-error>
+        </mat-form-field>
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+        <button mat-raised-button color="primary" class="full-width">{{buttonText}}</button>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+            <button (click) ="googleSignIn()" mat-raised-button class="social-button" color="accent"><img class="g-logo " src="..\assets\500px-Google__G__Logo.svg.png" >Sign in with Google</button>
+            
+    </mat-grid-tile>
+
+</mat-grid-list>
+   
+
+
+</mat-card>
+
+<mat-card class="card">
+    <p>{{questionText}} <span (click)="toogle()">{{questionText2}}</span></p>
+</mat-card>
+

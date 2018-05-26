@@ -1,0 +1,18 @@
+<div class="feed"  *ngFor="let feed of feeds| async">
+        <mat-card class="feed-card">
+                <mat-card-header>
+                    <img mat-card-avatar src="{{feed.ownerPhotoUrl}}">
+                    <mat-card-title>{{feed.ownerName}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <img class="feed-image" src="{{feed.postDownloadUrl}}">
+                </mat-card-content>
+                <mat-card-actions>
+                    <p><strong>{{feed.postLikes}}</strong> Likes <strong>{{feed.postComments}}</strong> Comments</p>
+                    <p>{{feed.postDescription}}</p>
+                    <button mat-icon-button><mat-icon>thumb_up</mat-icon></button>
+                    <button mat-icon-button (click)="openBottomSheet()" ><mat-icon>share</mat-icon></button>
+                    <button mat-icon-button><mat-icon>comment</mat-icon></button>
+                </mat-card-actions>
+            </mat-card>           
+</div>

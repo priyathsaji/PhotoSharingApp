@@ -1,0 +1,54 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .my-toolbar {
+    position: fixed;
+    top: 0;
+    margin-left:-10px;
+    margin-right:-10px !important;
+    z-index: 100;
+  }
+
+  .profile-pic{
+    width:40px;
+    border-radius: 20px;
+    margin-left:15px;
+  }
+
+  .search-icon{
+    margin-left:15px;
+    margin-right:5px;
+  }
+
+  .full-width{
+    width:100%;
+  }
+
+  .search-results{
+    margin-top:65px;
+    color:white;
+
+  }
+
+  .suggestion-image{
+    float:left;
+    width:40px;
+    border-radius: 20px;
+    margin-top:5px;
+  }
+
+  .suggestion-name{
+    float:left;
+    margin-left:10px;
+  }
+
+  .notification-card{
+    margin:5px;
+  }
+
+  

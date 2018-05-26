@@ -1,0 +1,169 @@
+<mat-card class="profile-header" *ngIf="profileData | async as profile;else loading" >
+    <div class="something" ><img class="responsive-profile-pic" src="{{profile.photoURL}}"></div>
+    <div class="user-details">
+      <h2>{{profile.displayName}}</h2>
+      <h3>{{profile.email}}</h3>
+      <button mat-raised-button [disabled] ='pending'(click)="buttonAction1()" color="primary">{{buttonText1}}</button>
+      <button (click)="openDialog()" mat-icon-button color="primary"><mat-icon>settings</mat-icon></button>
+    </div>
+</mat-card>
+
+<ng-template #loading>
+    <mat-progress-bar class="loading-bar" mode="indeterminate"></mat-progress-bar>
+</ng-template>
+<mat-card class="other-info">
+  <div class="friends-info"><h1>300</h1><h3>friends</h3></div>
+  <div class="post-info"><h1>300</h1><h3>Posts</h3></div>
+  <div class="likes-info"><h1>300</h1><h3>Likes</h3></div>
+</mat-card>
+<div class="tabs">
+<mat-tab-group>
+  <mat-tab label="Posts">
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    
+      <span><img class="responsive" src="../../../assets/userAvatar.png"></span>
+    </mat-tab>
+  <mat-tab label="Friends">
+    <mat-card class="friends-card">
+      <mat-card-header>
+        <img mat-card-avatar src="../../../assets/userAvatar.png">
+        <mat-card-title>Priyath Saji</mat-card-title>
+        <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <mat-card class="friends-card">
+        <mat-card-header>
+          <img mat-card-avatar src="../../../assets/userAvatar.png">
+          <mat-card-title>Priyath Saji</mat-card-title>
+          <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <mat-card class="friends-card">
+          <mat-card-header>
+            <img mat-card-avatar src="../../../assets/userAvatar.png">
+            <mat-card-title>Priyath Saji</mat-card-title>
+            <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+        <mat-card class="friends-card">
+            <mat-card-header>
+              <img mat-card-avatar src="../../../assets/userAvatar.png">
+              <mat-card-title>Priyath Saji</mat-card-title>
+              <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card class="friends-card">
+              <mat-card-header>
+                <img mat-card-avatar src="../../../assets/userAvatar.png">
+                <mat-card-title>Priyath Saji</mat-card-title>
+                <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+            <mat-card class="friends-card">
+                <mat-card-header>
+                  <img mat-card-avatar src="../../../assets/userAvatar.png">
+                  <mat-card-title>Priyath Saji</mat-card-title>
+                  <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+              <mat-card class="friends-card">
+                  <mat-card-header>
+                    <img mat-card-avatar src="../../../assets/userAvatar.png">
+                    <mat-card-title>Priyath Saji</mat-card-title>
+                    <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                  </mat-card-header>
+                </mat-card>
+                <mat-card class="friends-card">
+                    <mat-card-header>
+                      <img mat-card-avatar src="../../../assets/userAvatar.png">
+                      <mat-card-title>Priyath Saji</mat-card-title>
+                      <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                    </mat-card-header>
+                  </mat-card>
+                  <mat-card class="friends-card">
+                      <mat-card-header>
+                        <img mat-card-avatar src="../../../assets/userAvatar.png">
+                        <mat-card-title>Priyath Saji</mat-card-title>
+                        <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                      </mat-card-header>
+                    </mat-card>
+                    <mat-card class="friends-card">
+                        <mat-card-header>
+                          <img mat-card-avatar src="../../../assets/userAvatar.png">
+                          <mat-card-title>Priyath Saji</mat-card-title>
+                          <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                        </mat-card-header>
+                      </mat-card><mat-card class="friends-card">
+                          <mat-card-header>
+                            <img mat-card-avatar src="../../../assets/userAvatar.png">
+                            <mat-card-title>Priyath Saji</mat-card-title>
+                            <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                          </mat-card-header>
+                        </mat-card>
+                        <mat-card class="friends-card">
+                            <mat-card-header>
+                              <img mat-card-avatar src="../../../assets/userAvatar.png">
+                              <mat-card-title>Priyath Saji</mat-card-title>
+                              <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                            </mat-card-header>
+                          </mat-card>
+                          <mat-card class="friends-card">
+                              <mat-card-header>
+                                <img mat-card-avatar src="../../../assets/userAvatar.png">
+                                <mat-card-title>Priyath Saji</mat-card-title>
+                                <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                              </mat-card-header>
+                            </mat-card>
+                            <mat-card class="friends-card">
+                                <mat-card-header>
+                                  <img mat-card-avatar src="../../../assets/userAvatar.png">
+                                  <mat-card-title>Priyath Saji</mat-card-title>
+                                  <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                                </mat-card-header>
+                              </mat-card><mat-card class="friends-card">
+          <mat-card-header>
+            <img mat-card-avatar src="../../../assets/userAvatar.png">
+            <mat-card-title>Priyath Saji</mat-card-title>
+            <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+        <mat-card class="friends-card">
+            <mat-card-header>
+              <img mat-card-avatar src="../../../assets/userAvatar.png">
+              <mat-card-title>Priyath Saji</mat-card-title>
+              <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+          <mat-card class="friends-card">
+              <mat-card-header>
+                <img mat-card-avatar src="../../../assets/userAvatar.png">
+                <mat-card-title>Priyath Saji</mat-card-title>
+                <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+            <mat-card class="friends-card">
+                <mat-card-header>
+                  <img mat-card-avatar src="../../../assets/userAvatar.png">
+                  <mat-card-title>Priyath Saji</mat-card-title>
+                  <mat-card-subtitle>priyathsaji@gmail.com</mat-card-subtitle>
+                </mat-card-header>
+              </mat-card>
+  </mat-tab>
+</mat-tab-group>
+</div>  
+  
+  
